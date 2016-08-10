@@ -1,274 +1,440 @@
 <!DOCTYPE HTML>
 <!--
-	Prologue by HTML5 UP
+	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Sérgio Fotografias</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-		<!-- Script jquery para suavizar a troca de fotos-->
-		
-		
-		<script>
-		
-			
-		$(document).ready(function(){
-				
-			var arrayDados = new Array();
-			arrayDados[0] = "images/foto1hd.jpg";
-			arrayDados[1] = "images/foto2hd.jpg";
-			arrayDados[2] = "images/foto3hd.jpg";
-				
-			var id = 0;
-				
-			window.setInterval(function(){				
-				$('#img1').fadeOut();				
-				$('#img1').fadeIn();
-				$('#img1').attr('src', arrayDados[id])
-				id = (id + 1) % 3;
-			},2000);
-			
-		});
-		</script>
-		
-		<style type="text/css">
-			#div.slide{
-				width: 50%;
-				height: auto;
+	<style  type="text/css">
+			body {background-color: #CCC; font-family: Tahoma,Arial;}
+			.galerias {
+				position: absolute; /* posição absoluta ao elemento pai, neste caso o BODY */
+				/* Posiciona no meio, tanto em relação a esquerda como ao topo */
+				position: fixed;
+				left: 10%;
+				top: 5%;
+				width: 80%; /* Largura da DIV */
+				height: 90%; /* Altura da DIV */
+				max-height: 960px;
+				/* A margem a esquerda deve ser menos a metade da largura */
+				/* A margem ao topo deve ser menos a metade da altura */
+				/* Fazendo isso, centralizará a DIV */
+				background-position: right 50%;
+				background-color : transparent;
+				color: #FFF;
+				text-align: center; /* Centraliza o texto */
+				z-index: 1000; /* Faz com que fique sobre todos os elementos da página */
 			}
-		</style>
+			.texto{
+				text-shadow: 2px 2px #000000;
+			}
+			#fechar { 
+				margin: 5px; font-size: 18px;
+				text-shadow: 2px 2px #000000;
+			
+			}
+			
+			.main{
+				max-width:95%;
+				max-height:95%;
+			
+			
+			}
+	</style>
+
+	  <script type="text/javascript">
+	  
+		function fechar(id) {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById("sidebar").style.display = 'block';
+		}
+		
+		function abrir(id){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById("sidebar").style.display = 'none';
+		}
 		
 		
+		
+	 </script>
+	 <script>
+		$(document).ready(function() {
+			fechar('galeriacasamento');	
+		});
+	 </script>
 
 	</head>
 	<body>
-
-		<!-- Header -->
-			<div id="header">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Sérgio Fotografias</h1>
-							<p>Hyperspace Engineer</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
-
-								Prologue's nav expects links in one of two formats:
-
-								1. Hash link (scrolls to a different section within the page)
-
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-
-							-->
-							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-
-				</div>
+		<section id = "galerias">
+		
+			<div id="galeriacasamento" class = "galerias" style="display:none"> <!--para suavizar a troca de fotos-->
+				<script type="text/javascript">
 				
-			
+				var arrayDados1 = new Array();
+				arrayDados1[0] = "images/casamento/2.jpg";
+				arrayDados1[1] = "images/casamento/3.jpg";
+				arrayDados1[2] = "images/casamento/4.jpg";
+				arrayDados1[3] = "images/casamento/5.jpg";
+				arrayDados1[4] = "images/casamento/6.jpg";
+				arrayDados1[5] = "images/casamento/7.jpg";
+				arrayDados1[6] = "images/casamento/8.jpg";
+				arrayDados1[7] = "images/casamento/9.jpg";
+				arrayDados1[8] = "images/casamento/10.jpg";
+				
 
-				<div class="bottom">
+				var id1 = 0;
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+				function proxima1(){					
+					id1 += 1;
+					if(id1 > 9) id1 = 0;
+					$('#img1').fadeIn();
+					$('#img1').attr('src', arrayDados1[id1]);
+					
+				}
+				function anterior1(){
+					id1 -= 1;
+					if(id1 < 0) id1 = 5;
+					$('#img1').attr('src', arrayDados1[id1]);
 
-				</div>
+
+				}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriacasamento');">FECHAR</a></div>
+				<img id = "img1" class = "main" src="images/casamento/1.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior1();">Anterior </a>|<a class = "texto" href="javascript:proxima1();"> Próxima</a></div>
 
 			</div>
 			
+			<div id="galeriawedding" class = "galerias" style="display:none"> <!-- para suavizar a troca de fotos-->
+				<script type="text/javascript">
 				
+				var arrayDados2 = new Array();
+				arrayDados2[0] = "images/wedding/1.jpg";
+				arrayDados2[1] = "images/wedding/2.jpg";
+				arrayDados2[2] = "images/wedding/3.jpg";
+				arrayDados2[3] = "images/wedding/4.jpg";
+				arrayDados2[4] = "images/wedding/5.jpg";
+				arrayDados2[5] = "images/wedding/6.jpg";
+				arrayDados2[6] = "images/wedding/7.jpg";
+				arrayDados2[7] = "images/wedding/8.jpg";
+				arrayDados2[8] = "images/wedding/9.jpg";
+				arrayDados2[9] = "images/wedding/10.jpg";
+				arrayDados2[10] = "images/wedding/11.jpg";
+				arrayDados2[11] = "images/wedding/12.jpg";
+				arrayDados2[12] = "images/wedding/13.jpg";
+				arrayDados2[13] = "images/wedding/14.jpg";
+				arrayDados2[14] = "images/wedding/15.jpg";
+				arrayDados2[15] = "images/wedding/16.jpg";
+				arrayDados2[16] = "images/wedding/17.jpg";
+				arrayDados2[17] = "images/wedding/18.jpg";
+				arrayDados2[18] = "images/wedding/19.jpg";
+				arrayDados2[19] = "images/wedding/20.jpg";
+				arrayDados2[20] = "images/wedding/21.jpg";
+				arrayDados2[21] = "images/wedding/22.jpg";
+				arrayDados2[22] = "images/wedding/23.jpg";
+				arrayDados2[23] = "images/wedding/24.jpg";
+				arrayDados2[24] = "images/wedding/25.jpg";
+				arrayDados2[25] = "images/wedding/26.jpg";
+				arrayDados2[26] = "images/wedding/27.jpg";
+				arrayDados2[27] = "images/wedding/28.jpg";
+				arrayDados2[28] = "images/wedding/29.jpg";
+				arrayDados2[29] = "images/wedding/30.jpg";
+				arrayDados2[30] = "images/wedding/31.jpg";
+				arrayDados2[31] = "images/wedding/32.jpg";
+				
+				
+
+				var id = 0;
+
+				function proxima(){				
+					id += 1;
+					if(id > 31) id = 0;
+					$('#img2').fadeIn();
+					$('#img2').attr('src', arrayDados2[id]);
+					
+				}
+				function anterior(){
+					$('#img2').fadeIn();
+					id -= 1;
+					if(id < 0) id = 5;
+					$('#img2').attr('src', arrayDados2[id]);
+
+
+				}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriawedding');">FECHAR</a></div>
+				<img id = "img2" class = "main" src="images/wedding/1.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+
+			</div>
 			
-				
-		
-		<!-- Main -->
-		
-			<div id="main">
+			
+			
+		</section>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Bem-vindo</a></li>
+							<li><a href="#one">Portfolio</a></li>
+							<!--li><a href="#two">What we do</a></li-->
+							<li><a href="#three">Contato</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
 
 				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
-								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
-							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
-							</footer>
-
+							<ul class="actions" align = "center">
+								<li ><a href="#one"  class="button scrolly">Conheça</a></li>
+							</ul>
 						</div>
+
 					</section>
-					
-				<div class = "slide" align = "center"> <img width = 100% src = "images/foto1hd.jpg" id = "img1"/> </div>	
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
-
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
-
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
+				<!-- PORTFÓLIO -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/capa-casamento.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Casamentos</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriacasamento');" class="button" >Ver álbum</a></li>
+									</ul>
 								</div>
 							</div>
-
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
-
-							
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-							<form method="post" action="sendEmailForm.php">
-								<div class="row">
-									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Nome" /></div>
-									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="12u$">
-										<textarea name="message" placeholder="Mensagem"></textarea>
-									</div>
-									<div class="12u$">
-										<input type="submit" value="Enviar mensagem" />
-									</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-pre-wedding.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Pre-Wedding / Trash the Drass</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriawedding');" class="button" >Ver álbum</a></li>
+									</ul>
 								</div>
-							</form>
-							
-							
-
-						</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-album-diagramado.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Álbuns Diagramados</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-15anos.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>15 anos</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-infantil.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Infantil</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-gestante.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Gestantes</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
 					</section>
 
-			</div>
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>What we do</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Lorem ipsum amet</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-lock"></span>
+									<h3>Aliquam sed nullam</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>Sed erat ullam corper</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>Veroeros quis lorem</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-chain"></span>
+									<h3>Urna quis bibendum</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>Aliquam urna dapibus</h3>
+									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								</section>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</section >
+
+                    <!-- Three -->
+    					<section id="three" class="wrapper style1 fade-up">
+    						<div class="inner">
+    							<h2>Contato</h2>
+    							<p>TEXTO</p>
+    							<!--div class="split style1">
+    								<section>
+    									<form method="post" action="#">
+    										<div class="field half first">
+    											<label for="name">Name</label>
+    											<input type="text" name="name" id="name" />
+    										</div>
+    										<div class="field half">
+    											<label for="email">Email</label>
+    											<input type="text" name="email" id="email" />
+    										</div>
+    										<div class="field">
+    											<label for="message">Message</label>
+    											<textarea name="message" id="message" rows="5"></textarea>
+    										</div>
+    										<ul class="actions">
+    											<li><a href="" class="button submit">Send Message</a></li>
+    										</ul>
+    									</form>
+    								</section>
+    								<section>
+    									<ul class="contact">
+    										<li>
+    											<h3>Address</h3>
+    											<span>12345 Somewhere Road #654<br />
+    											Nashville, TN 00000-0000<br />
+    											USA</span>
+    										</li>
+    										<li>
+    											<h3>Email</h3>
+    											<a href="#">user@untitled.tld</a>
+    										</li>
+    										<li>
+    											<h3>Phone</h3>
+    											<span>(000) 000-0000</span>
+    										</li>
+    										<li>
+    											<h3>Social</h3>
+    											<ul class="icons">
+    												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+    												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+    												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
+    												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+    												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</section>
+    							</div -->
+    							<ul class="contact">
+    								<li>
+    									<h3>Endereço</h3>
+    									<span>Rua Dr. Júlio Cardoso, 2147 - Centro<br />
+    									Franca, SP</span>
+    								</li>
+    								<li>
+    									<h3>Email</h3>
+    									<a href="mailto:sergiofotografias@hotmail.com.br">sergiofotografias@hotmail.com.br</a>
+    								</li>
+    								<li>
+    									<h3>Fone</h3>
+    									<span>(16) 3702-3574 / 9.9155-8315</span>
+    								</li>
+    								<li>
+    									<h3>Social</h3>
+    									<ul class="icons">
+    										<!--li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li-->
+    										<li><a href="https://www.facebook.com/Sergiofotografias/?fref=ts" class="fa-facebook"><span class="label">Facebook</span> <b>Facebook</b></a></li>
+    										<!--li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li-->
+    										<!--li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+    										<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li-->
+    									</ul>
+    								</li>
+    							</ul>
+    						</div>
+    					</section >
+
+    			</div>
 
 		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
-
-			</div>
+				</div>
+			</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+
 
 	</body>
 </html>
