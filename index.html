@@ -14,11 +14,12 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		
-		<style type="text/css">
+		<style  type="text/css">
 		body {background-color: #CCC; font-family: Tahoma,Arial;}
-		#posiciona {
+		.galeria {
 			position: absolute; /* posição absoluta ao elemento pai, neste caso o BODY */
 			/* Posiciona no meio, tanto em relação a esquerda como ao topo */
+			position: fixed;
 			left: 40%; 
 			top: 50%;
 			right: 40%;
@@ -37,55 +38,61 @@
 		}
 		#fechar { margin: 5px; font-size: 12px; }
 	  </style>
-	  <script>
-		function fechar() { 
-			document.getElementById("posiciona").style.display = 'none'; 
+	  
+	  <script type="text/javascript">
+		var fechar = function(id) { 
+			document.getElementById(id).style.display = 'none'; 
 		}
-		function abrir(){
-			document.getElementById("posiciona").style.display = 'block';
+		function abrir(id){
+			document.getElementById(id).style.display = 'block';
 		}
+		
+		window.onload = fechar('galeria1');
+		
 	 </script>
 	</head>
 	<body>
-		
-		<div id="posiciona"> 
-		<!-- Script jquery para suavizar a troca de fotos-->
-		<script>
-		
-		var arrayDados = new Array();
-		arrayDados[0] = "images/banner.jpg";
-		arrayDados[1] = "images/foto1.jpg";
-		arrayDados[2] = "images/foto2.jpg";
-		arrayDados[3] = "images/foto3.jpg";
-		arrayDados[4] = "images/foto4.jpg";
-		arrayDados[5] = "images/foto5.jpg";
+		<section id = "galerias">
+			<div id="galeria1" class = "galeria"> 
+				<!-- Script jquery para suavizar a troca de fotos-->
+				<script type="text/javascript">
 				
-		var id = 0;
-			
-		function proxima(){								
-			$('#img1').fadeOut();				
-			$('#img1').fadeIn();						
-			id += 1;			
-			if(id > 5) id = 0;
-			$('#img1').attr('src', arrayDados[id]);
-			
-		}
-		function anterior(){								
-			$('#img1').fadeOut();				
-			$('#img1').fadeIn();
-			id -= 1;
-			if(id < 0) id = 5;
-			$('#img1').attr('src', arrayDados[id]);
-			
-			
-		}
-			
-		</script>		
-		<div id="fechar" align=right><a href="javascript:fechar();">FECHAR</a></div> 
-		<div><img id = "img1" src="images/banner.jpg" alt="" width = 100% data-position="center" /></div>
-		<div id="anterior" align=center><a href="javascript:anterior();">Anterior </a>|<a href="javascript:proxima();"> Próxima</a></div> 
-		</div>
-		
+				
+				var arrayDados = new Array();
+				arrayDados[0] = "images/banner.jpg";
+				arrayDados[1] = "images/foto1.jpg";
+				arrayDados[2] = "images/foto2.jpg";
+				arrayDados[3] = "images/foto3.jpg";
+				arrayDados[4] = "images/foto4.jpg";
+				arrayDados[5] = "images/foto5.jpg";
+						
+				var id = 0;
+					
+				function proxima(){								
+					$('#img1').fadeOut();				
+					$('#img1').fadeIn();						
+					id += 1;			
+					if(id > 5) id = 0;
+					$('#img1').attr('src', arrayDados[id]);
+					
+				}
+				function anterior(){								
+					$('#img1').fadeOut();				
+					$('#img1').fadeIn();
+					id -= 1;
+					if(id < 0) id = 5;
+					$('#img1').attr('src', arrayDados[id]);
+					
+					
+				}
+				</script>	
+					
+				<div id="fechar" align=right><a href="javascript:fechar('galeria1');">FECHAR</a></div> 
+				<div><img id = "img1" src="images/banner.jpg" alt="" width = 100% data-position="center" /></div>
+				<div id="anterior" align=center><a href="javascript:anterior();">Anterior </a>|<a href="javascript:proxima();"> Próxima</a></div> 
+				
+			</div>
+		</section>
 		
 		<!-- Sidebar -->
 			<section id="sidebar">
@@ -114,36 +121,19 @@
 							</ul>
 						</div>
 						
-				
-
-						<a href="javascript:abrir();" onclick="document.getElementById('pop').style.display='block';">Mostra</a>
 					</section>
 					
-					<div class="div_teste" align ="center">
-						<table  align ="center" >
-							<tr >
-								<td>
-									<b><font size="2" face="Verdana" color="#0000FF">Fechar[X]</font></b>
-								</td>
-							</tr>
-							<img src="images/pic01.jpg" alt="" data-position="center" width = 100% />
-							<tr>
-								
-							</tr>
-						</table>
-					</center>
-				</div>
 
-				<!-- One -->
+				<!-- PORTFÓLIO -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
 							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Casamentos</h2>
+									<p>Confira os momentos especiais que registramos ao longo da vida.</p>
 									<ul class="actions">
-										<li><a href="#" class="button">Learn more</a></li>
+										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
 									</ul>
 								</div>
 							</div>
