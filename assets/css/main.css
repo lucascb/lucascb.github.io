@@ -19,6 +19,7 @@
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
+		
 	}
 
 	body {
@@ -3038,7 +3039,7 @@
 				-webkit-transition: opacity 1s ease;
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
-				background: rgba(49, 36, 80, 0.9);
+				background: rgba(255, 255, 255, 0.9);
 				content: '';
 				display: block;
 				height: 100%;
@@ -3884,7 +3885,7 @@
 		background-image: url("images/banner.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: 80% 100%;
 	}
 
 		#intro p {
