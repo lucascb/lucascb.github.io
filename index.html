@@ -13,22 +13,21 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
+
 		<style  type="text/css">
 		body {background-color: #CCC; font-family: Tahoma,Arial;}
 		.galeria {
 			position: absolute; /* posição absoluta ao elemento pai, neste caso o BODY */
 			/* Posiciona no meio, tanto em relação a esquerda como ao topo */
 			position: fixed;
-			left: 40%; 
-			top: 50%;
-			right: 40%;
-			width: 60%; /* Largura da DIV */
+			left: 0%;
+			top: 20%;
+			width: 100%; /* Largura da DIV */
 			height: auto; /* Altura da DIV */
 			/* A margem a esquerda deve ser menos a metade da largura */
 			/* A margem ao topo deve ser menos a metade da altura */
 			/* Fazendo isso, centralizará a DIV */
-			margin-left: -150px;
+
 			margin-top: -125px;
 			background-color: #FFF;
 			color: #FFF;
@@ -38,26 +37,31 @@
 		}
 		#fechar { margin: 5px; font-size: 12px; }
 	  </style>
-	  
+
 	  <script type="text/javascript">
-		var fechar = function(id) { 
-			document.getElementById(id).style.display = 'none'; 
+		var fechar = function(id) {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById("sidebar").style.display = 'block';
 		}
 		function abrir(id){
 			document.getElementById(id).style.display = 'block';
+			document.getElementById("sidebar").style.display = 'none';
 		}
-		
-		window.onload = fechar('galeria1');
-		
 	 </script>
+	 <script>
+		$(document).ready(function() {
+			fechar('galeria1');
+		});
+	 </script>
+
 	</head>
 	<body>
 		<section id = "galerias">
-			<div id="galeria1" class = "galeria"> 
+			<div id="galeria1" class = "galeria" style="display:none">
 				<!-- Script jquery para suavizar a troca de fotos-->
 				<script type="text/javascript">
-				
-				
+
+
 				var arrayDados = new Array();
 				arrayDados[0] = "images/banner.jpg";
 				arrayDados[1] = "images/foto1.jpg";
@@ -65,35 +69,35 @@
 				arrayDados[3] = "images/foto3.jpg";
 				arrayDados[4] = "images/foto4.jpg";
 				arrayDados[5] = "images/foto5.jpg";
-						
+
 				var id = 0;
-					
-				function proxima(){								
-					$('#img1').fadeOut();				
-					$('#img1').fadeIn();						
-					id += 1;			
+
+				function proxima(){
+					$('#img1').fadeOut();
+					$('#img1').fadeIn();
+					id += 1;
 					if(id > 5) id = 0;
 					$('#img1').attr('src', arrayDados[id]);
-					
+
 				}
-				function anterior(){								
-					$('#img1').fadeOut();				
+				function anterior(){
+					$('#img1').fadeOut();
 					$('#img1').fadeIn();
 					id -= 1;
 					if(id < 0) id = 5;
 					$('#img1').attr('src', arrayDados[id]);
-					
-					
+
+
 				}
-				</script>	
-					
-				<div id="fechar" align=right><a href="javascript:fechar('galeria1');">FECHAR</a></div> 
+				</script>
+
+				<div id="fechar" align=right><a href="javascript:fechar('galeria1');">FECHAR</a></div>
 				<div><img id = "img1" src="images/banner.jpg" alt="" width = 100% data-position="center" /></div>
-				<div id="anterior" align=center><a href="javascript:anterior();">Anterior </a>|<a href="javascript:proxima();"> Próxima</a></div> 
-				
+				<div id="anterior" align=center><a href="javascript:anterior();">Anterior </a>|<a href="javascript:proxima();"> Próxima</a></div>
+
 			</div>
 		</section>
-		
+
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
@@ -107,22 +111,22 @@
 					</nav>
 				</div>
 			</section>
-		
-		
+
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							
+
 							<ul class="actions" align = "center">
 								<li ><a href="#one"  class="button scrolly">Conheça</a></li>
 							</ul>
 						</div>
-						
+
 					</section>
-					
+
 
 				<!-- PORTFÓLIO -->
 					<section id="one" class="wrapper style2 spotlights">
@@ -207,64 +211,90 @@
 						</div>
 					</section -->
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+                    <!-- Three -->
+    					<section id="three" class="wrapper style1 fade-up">
+    						<div class="inner">
+    							<h2>Contate-nos</h2>
+    							<p>Nao sei o que eu coloco aqui de texto</p>
+    							<!--div class="split style1">
+    								<section>
+    									<form method="post" action="#">
+    										<div class="field half first">
+    											<label for="name">Name</label>
+    											<input type="text" name="name" id="name" />
+    										</div>
+    										<div class="field half">
+    											<label for="email">Email</label>
+    											<input type="text" name="email" id="email" />
+    										</div>
+    										<div class="field">
+    											<label for="message">Message</label>
+    											<textarea name="message" id="message" rows="5"></textarea>
+    										</div>
+    										<ul class="actions">
+    											<li><a href="" class="button submit">Send Message</a></li>
+    										</ul>
+    									</form>
+    								</section>
+    								<section>
+    									<ul class="contact">
+    										<li>
+    											<h3>Address</h3>
+    											<span>12345 Somewhere Road #654<br />
+    											Nashville, TN 00000-0000<br />
+    											USA</span>
+    										</li>
+    										<li>
+    											<h3>Email</h3>
+    											<a href="#">user@untitled.tld</a>
+    										</li>
+    										<li>
+    											<h3>Phone</h3>
+    											<span>(000) 000-0000</span>
+    										</li>
+    										<li>
+    											<h3>Social</h3>
+    											<ul class="icons">
+    												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+    												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+    												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
+    												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+    												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</section>
+    							</div -->
+    							<ul class="contact">
+    								<li>
+    									<h3>Endereço</h3>
+    									<span>Rua Dr. Júlio Cardoso, 2147 - Centro<br />
+    									Franca, SP</span>
+    								</li>
+    								<li>
+    									<h3>Email</h3>
+    									<a href="mailto:sergiofotografias@hotmail.com.br">sergiofotografias@hotmail.com.br</a>
+    								</li>
+    								<li>
+    									<h3>Fone</h3>
+    									<span><b>Fixo:</b> (16) 3702-3574<br />
+                                            <b>Whatsapp:</b> (16) 99155-8315</span>
+    								</li>
+    								<li>
+    									<h3>Social</h3>
+    									<ul class="icons">
+    										<!--li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li-->
+    										<li><a href="https://www.facebook.com/Sergiofotografias/?fref=ts" class="fa-facebook"><span class="label">Facebook</span> <b>Facebook</b></a></li>
+    										<!--li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li-->
+    										<!--li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+    										<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li-->
+    									</ul>
+    								</li>
+    							</ul>
+    						</div>
+    					</section >
 
-			</div>
+    			</div>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -283,8 +313,9 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			
-			
+
+
 
 	</body>
 </html>
+
