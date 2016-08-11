@@ -9,6 +9,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		
+		
+		
+		
 
 		<style  type="text/css">
 			body {background-color: #000000; font-family: Tahoma,Arial;}
@@ -16,16 +20,14 @@
 				position: absolute; /* posição absoluta ao elemento pai, neste caso o BODY */
 				/* Posiciona no meio, tanto em relação a esquerda como ao topo */
 				position: fixed;
-				left: 10%;
-				top: 5%;
-				width: 80%; /* Largura da DIV */
-				height: 85%; /* Altura da DIV */
+				width: 100%; /* Largura da DIV */
+				height: 100%; /* Altura da DIV */
 				max-height: 960px;
 				/* A margem a esquerda deve ser menos a metade da largura */
 				/* A margem ao topo deve ser menos a metade da altura */
 				/* Fazendo isso, centralizará a DIV */
 				background-position: right 50%;
-				background-color : transparent;
+				background-color: rgba(0, 0, 0, 0.91);
 				color: #FFF;
 				text-align: center; /* Centraliza o texto */
 				z-index: 1000; /* Faz com que fique sobre todos os elementos da página */
@@ -34,14 +36,14 @@
 				text-shadow: 2px 2px #000000;
 			}
 			#fechar {
-				margin: 5px; font-size: 18px;
+				margin: 10px; font-size: 18px;
 				text-shadow: 2px 2px #000000;
 
 			}
 
 			.main{
-				max-width:95%;
-				max-height:95%;
+				max-width:80%;
+				max-height:80%;
 
 
 			}
@@ -56,17 +58,23 @@
 				document.getElementById(id).style.display = 'block';
 				document.getElementById("sidebar").style.display = 'none';
 			}
-		</script>
-
-	 	<script>
+		
 			$(document).ready(function() {
 				fechar('galeriacasamento');
+				
+				
 			});
+			
+			
+			
+			
 	 	</script>
 
 	</head>
 
 	<body>
+		
+		
 		<section id = "galerias">
 
 			<div id="galeriacasamento" class = "galerias" style="display:none"> <!--para suavizar a troca de fotos-->
@@ -394,6 +402,8 @@
     					</section >
 
     			</div>
+				
+				
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -405,6 +415,11 @@
 			</footer>
 
 		<!-- Scripts -->
+			
+
+
+
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -412,8 +427,9 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			
 
 
 	</body>
+	
 </html>
