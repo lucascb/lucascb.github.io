@@ -2,19 +2,15 @@
 
 <html>
 	<head>
-		   
-		<title>Sérgio Fotografias</title>	
-		<link rel="icon" type="image/png" href="favicon.png" />		
+
+		<title>Sérgio Fotografias</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
-		
-		
-		
 
 		<style  type="text/css">
 			body {background-color: #000000; font-family: Tahoma,Arial;}
@@ -40,14 +36,11 @@
 			#fechar {
 				margin: 10px; font-size: 18px;
 				text-shadow: 2px 2px #000000;
-
 			}
 
 			.main{
 				max-width:80%;
 				max-height:80%;
-
-
 			}
 	    </style>
 
@@ -60,23 +53,17 @@
 				document.getElementById(id).style.display = 'block';
 				document.getElementById("sidebar").style.display = 'none';
 			}
-		
+
 			$(document).ready(function() {
 				fechar('galeriacasamento');
-				
-				
 			});
-			
-			
-			
-			
+
 	 	</script>
 
 	</head>
 
 	<body>
-		
-		
+
 		<section id = "galerias">
 
 			<div id="galeriacasamento" class = "galerias" style="display:none"> <!--para suavizar a troca de fotos-->
@@ -150,7 +137,6 @@
 					arrayDados2[31] = "images/wedding/32.jpg";
 
 					var id = 0;
-
 					function proxima(){
 						id += 1;
 						if(id > 31) id = 0;
@@ -171,6 +157,189 @@
 
 			</div>
 
+			<div id="galeriadiagramado" class="galerias" style="display:none">
+				<script type="text/javascript">
+					var arrayDados3 = new Array();
+					arrayDados3[0] = "images/diagramado/01.jpg";
+					arrayDados3[1] = "images/diagramado/02.jpg";
+					arrayDados3[2] = "images/diagramado/03.jpg";
+					arrayDados3[3] = "images/diagramado/04.jpg";
+					arrayDados3[4] = "images/diagramado/05.jpg";
+					arrayDados3[5] = "images/diagramado/06.jpg";
+					arrayDados3[6] = "images/diagramado/07.jpg";
+					arrayDados3[7] = "images/diagramado/08.jpg";
+					arrayDados3[8] = "images/diagramado/09.jpg";
+					arrayDados3[9] = "images/diagramado/10.jpg";
+					arrayDados3[10] = "images/diagramado/11.jpg";
+					arrayDados3[11] = "images/diagramado/12.jpg";
+					arrayDados3[12] = "images/diagramado/13.jpg";
+					arrayDados3[13] = "images/diagramado/14.jpg";
+					arrayDados3[14] = "images/diagramado/15.jpg";
+					arrayDados3[15] = "images/diagramado/16.jpg";
+					arrayDados3[16] = "images/diagramado/17.jpg";
+					arrayDados3[17] = "images/diagramado/18.jpg";
+					arrayDados3[18] = "images/diagramado/19.jpg";
+
+					var id = 0;
+					function proxima(){
+						id = (id + 1) % 19;
+						$('#img3').fadeIn();
+						$('#img3').attr('src', arrayDados3[id]);
+					}
+					function anterior(){
+						$('#img3').fadeIn();
+						id -= 1;
+						if (id < 0) id = 18;
+						$('#img3').attr('src', arrayDados3[id]);
+					}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriadiagramado');">FECHAR</a></div>
+				<img id = "img3" class = "main" src="images/diagramado/01.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+			</div>
+
+			<div id="galeria15anos" class="galerias" style="display:none">
+				<script type="text/javascript">
+					var arrayDados4 = new Array();
+					arrayDados4[0] = "images/15anos/01.jpg";
+					arrayDados4[1] = "images/15anos/02.jpg";
+					arrayDados4[2] = "images/15anos/03.jpg";
+					arrayDados4[3] = "images/15anos/04.jpg";
+					arrayDados4[4] = "images/15anos/05.jpg";
+					arrayDados4[5] = "images/15anos/06.jpg";
+					arrayDados4[6] = "images/15anos/07.jpg";
+					arrayDados4[7] = "images/15anos/08.jpg";
+					arrayDados4[8] = "images/15anos/09.jpg";
+					arrayDados4[9] = "images/15anos/10.jpg";
+					arrayDados4[10] = "images/15anos/11.jpg";
+					arrayDados4[11] = "images/15anos/12.jpg";
+					arrayDados4[12] = "images/15anos/13.jpg";
+					arrayDados4[13] = "images/15anos/14.jpg";
+					arrayDados4[14] = "images/15anos/15.jpg";
+
+					var id = 0;
+					function proxima(){
+						id = (id + 1) % 15;
+						$('#img4').fadeIn();
+						$('#img4').attr('src', arrayDados4[id]);
+					}
+					function anterior(){
+						$('#img4').fadeIn();
+						id -= 1;
+						if (id < 0) id = 14;
+						$('#img4').attr('src', arrayDados4[id]);
+					}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeria15anos');">FECHAR</a></div>
+				<img id ="img4" class = "main" src="images/15anos/01.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+			</div>
+
+			<div id="galeriainfantil" class="galerias" style="display:none">
+				<script type="text/javascript">
+					var arrayDados5 = new Array();
+					arrayDados5[0] = "images/infantil/01.jpg";
+					arrayDados5[1] = "images/infantil/02.jpg";
+					arrayDados5[2] = "images/infantil/03.jpg";
+					arrayDados5[3] = "images/infantil/04.jpg";
+					arrayDados5[4] = "images/infantil/05.jpg";
+					arrayDados5[5] = "images/infantil/06.jpg";
+					arrayDados5[6] = "images/infantil/07.jpg";
+					arrayDados5[7] = "images/infantil/08.jpg";
+					arrayDados5[8] = "images/infantil/09.jpg";
+					arrayDados5[9] = "images/infantil/10.jpg";
+					arrayDados5[10] = "images/infantil/11.jpg";
+					arrayDados5[11] = "images/infantil/12.jpg";
+					arrayDados5[12] = "images/infantil/13.jpg";
+					arrayDados5[13] = "images/infantil/14.jpg";
+					arrayDados5[14] = "images/infantil/15.jpg";
+					arrayDados5[15] = "images/infantil/16.jpg";
+					arrayDados5[16] = "images/infantil/17.jpg";
+					arrayDados5[17] = "images/infantil/18.jpg";
+					arrayDados5[18] = "images/infantil/19.jpg";
+					arrayDados5[19] = "images/infantil/20.jpg";
+					arrayDados5[20] = "images/infantil/21.jpg";
+					arrayDados5[21] = "images/infantil/22.jpg";
+					arrayDados5[22] = "images/infantil/23.jpg";
+					arrayDados5[23] = "images/infantil/24.jpg";
+					arrayDados5[24] = "images/infantil/25.jpg";
+					arrayDados5[25] = "images/infantil/26.jpg";
+					arrayDados5[26] = "images/infantil/27.jpg";
+
+					var id = 0;
+					function proxima(){
+						id = (id + 1) % 27;
+						$('#img5').fadeIn();
+						$('#img5').attr('src', arrayDados5[id]);
+					}
+					function anterior(){
+						$('#img5').fadeIn();
+						id -= 1;
+						if (id < 0) id = 26;
+						$('#img5').attr('src', arrayDados5[id]);
+					}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriainfantil');">FECHAR</a></div>
+				<img id ="img5" class = "main" src="images/infantil/01.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+			</div>
+
+			<div id="galeriagestantes" class="galerias" style="display:none">
+				<script type="text/javascript">
+					var arrayDados6 = new Array();
+					arrayDados6[0] = "images/gestantes/01.jpg";
+					arrayDados6[1] = "images/gestantes/02.jpg";
+					arrayDados6[2] = "images/gestantes/03.jpg";
+					arrayDados6[3] = "images/gestantes/04.jpg";
+					arrayDados6[4] = "images/gestantes/05.jpg";
+					arrayDados6[5] = "images/gestantes/06.jpg";
+					arrayDados6[6] = "images/gestantes/07.jpg";
+					arrayDados6[7] = "images/gestantes/08.jpg";
+					arrayDados6[8] = "images/gestantes/09.jpg";
+					arrayDados6[9] = "images/gestantes/10.jpg";
+					arrayDados6[10] = "images/gestantes/11.jpg";
+					arrayDados6[11] = "images/gestantes/12.jpg";
+					arrayDados6[12] = "images/gestantes/13.jpg";
+					arrayDados6[13] = "images/gestantes/14.jpg";
+					arrayDados6[14] = "images/gestantes/15.jpg";
+					arrayDados6[15] = "images/gestantes/16.jpg";
+					arrayDados6[16] = "images/gestantes/17.jpg";
+					arrayDados6[17] = "images/gestantes/18.jpg";
+					arrayDados6[18] = "images/gestantes/19.jpg";
+					arrayDados6[19] = "images/gestantes/20.jpg";
+					arrayDados6[20] = "images/gestantes/21.jpg";
+					arrayDados6[21] = "images/gestantes/22.jpg";
+					arrayDados6[22] = "images/gestantes/23.jpg";
+					arrayDados6[23] = "images/gestantes/24.jpg";
+					arrayDados6[24] = "images/gestantes/25.jpg";
+					arrayDados6[25] = "images/gestantes/26.jpg";
+					arrayDados6[26] = "images/gestantes/27.jpg";
+					arrayDados6[27] = "images/gestantes/28.jpg";
+					arrayDados6[28] = "images/gestantes/29.jpg";
+					arrayDados6[29] = "images/gestantes/30.jpg";
+
+					var id = 0;
+					function proxima(){
+						id = (id + 1) % 30;
+						$('#img6').fadeIn();
+						$('#img6').attr('src', arrayDados6[id]);
+					}
+					function anterior(){
+						$('#img6').fadeIn();
+						id -= 1;
+						if (id < 0) id = 29;
+						$('#img6').attr('src', arrayDados6[id]);
+					}
+				</script>
+
+				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriagestantes');">FECHAR</a></div>
+				<img id ="img6" class = "main" src="images/gestantes/01.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+			</div>
+
 		</section>
 
 		<!-- Sidebar -->
@@ -179,8 +348,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Bem-vindo</a></li>
-							<li><a href="#one">Portfólio</a></li>
-							<li><a href="#two">Quem somos</a></li>
+							<li><a href="#one">Quem somos</a></li>
+							<li><a href="#two">Portfólio</a></li>
 							<li><a href="#three">Contato</a></li>
 						</ul>
 					</nav>
@@ -193,97 +362,19 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<!--ul class="actions" align = "center">
+							<ul class="actions" align = "center">
 								<li ><a href="#one"  class="button scrolly">Conheça</a></li>
-							</ul-->
+							</ul>
 						</div>
 
 					</section>
 
-
-				<!-- PORTFÓLIO -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<!--h2>Portfolio</h2-->
-							<a href="#" class="image"><img src="images/capa-casamento.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Casamentos</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeriacasamento');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/capa-pre-wedding.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Pre-Wedding / Trash the Drass</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeriawedding');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/capa-album-diagramado.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Álbuns Diagramados</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/capa-15anos.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>15 anos</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/capa-infantil.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Infantil</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/capa-gestante.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Gestantes</h2>
-									<p>Descrição</p>
-									<ul class="actions">
-										<li ><a href="javascript:abrir('galeria1');" class="button" >Ver álbum</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up" >
+				<!-- Quem Somos -->
+					<section id="one" class="wrapper style3 fade-up" >
 						<div class="inner">
-							<h2 align = "center">Quem somos</h2>
-							<p align = "center">Há quatro décadas no mercado, a empresa Sergio Fotografias vem a cada dia inovando e se mantendo adaptada ao mercado de imagens.
-							Fundada por Sergio Luis Pires e hoje comandada por sua esposa Marcia Pires e seu sobrinho Marcos Faria, juntos eternizam momentos em Franca/SP, em toda a região do interior do estado 
+							<h2 align = "center">Quem Somos</h2>
+							<p align = "center">Há quatro décadas no mercado, a empresa Sérgio Fotografias vem a cada dia inovando e se mantendo adaptada ao mercado de imagens.
+							Fundada por Sérgio Luis Pires e hoje comandada por sua esposa Márcia Pires e seu sobrinho Marcos Faria, juntos eternizam momentos em Franca/SP, em toda a região do interior do estado
 							de São Paulo e também em Minas Gerais.</p>
 							<p><img width = 100% src = "images/quem-somos.jpg" /></p>
 							<!--div class="features">
@@ -322,13 +413,92 @@
 								<li><a href="#" class="button">Learn more</a></li>
 							</ul-->
 						</div>
+						<h2 align = "center">Nosso Trabalho</h2>
 					</section >
+
+
+				<!-- PORTFÓLIO -->
+					<section id="two" class="wrapper style2 spotlights">
+						<section>
+							<!--h2>Portfolio</h2-->
+							<a href="#" class="image"><img src="images/capa-casamento.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Casamentos</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriacasamento');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-pre-wedding.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Pre-Wedding / Trash the Drass</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriawedding');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-album-diagramado.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Álbuns Diagramados</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriadiagramado');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-15anos.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>15 anos</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeria15anos');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-infantil.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Infantil</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriainfantil');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/capa-gestante.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Gestantes</h2>
+									<p>Descrição</p>
+									<ul class="actions">
+										<li ><a href="javascript:abrir('galeriagestantes');" class="button" >Ver álbum</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
 
                     <!-- Three -->
     					<section id="three" class="wrapper style1 fade-up">
     						<div class="inner">
     							<h2>Contato</h2>
-    							<p>TEXTO</p>
+    							<!--p>TEXTO</p-->
     							<!--div class="split style1">
     								<section>
     									<form method="post" action="#">
@@ -385,18 +555,19 @@
     									Franca, SP</span>
     								</li>
     								<li>
-    									<h3>Email</h3>
+										<h3>Email</h3>
     									<a href="mailto:sergiofotografias@hotmail.com.br">sergiofotografias@hotmail.com.br</a>
     								</li>
     								<li>
     									<h3>Fone</h3>
-    									<span>(16) 3702-3574 / 9.9155-8315</span>
+    									<span><b>Fixo:</b> (16) 3702-3574 <br />
+											<b>Whatsapp:</b> (16) 99155-8315</span>
     								</li>
     								<li>
     									<h3>Social</h3>
     									<ul class="icons">
     										<!--li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li-->
-    										<li><a href="https://www.facebook.com/Sergiofotografias/?fref=ts" class="fa-facebook"><span class="label">Facebook</span> <b>Facebook</b></a></li>
+    										<li><a href="https://www.facebook.com/Sergiofotografias/?fref=ts" class="fa-facebook"><span class="label">Facebook</span> Facebook</a></li>
     										<!--li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li-->
     										<!--li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
     										<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li-->
@@ -407,8 +578,8 @@
     					</section >
 
     			</div>
-				
-				
+
+
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -420,11 +591,6 @@
 			</footer>
 
 		<!-- Scripts -->
-			
-
-
-
-
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -432,9 +598,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			
-
 
 	</body>
-	
+
 </html>
