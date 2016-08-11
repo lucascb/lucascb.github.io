@@ -19,7 +19,7 @@
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
-		
+
 	}
 
 	body {
@@ -3254,7 +3254,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #000000; 
+			background-color: #000000;
 		}
 
 		.wrapper.style1-alt {
@@ -3270,7 +3270,7 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #000000;
 		}
 
 		.wrapper.style3-alt {
@@ -3374,14 +3374,14 @@
 			opacity: 0;
 		}
 
-/* Header */
+/* Header  #5e42a6*/
 
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color:#000000;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3865,7 +3865,7 @@
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: #8B0000;
+							background-color: #000000;
 						}
 
 		}

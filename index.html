@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Sérgio Fotografias</title>
@@ -14,8 +10,8 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-	<style  type="text/css">
-			body {background-color: #CCC; font-family: Tahoma,Arial;}
+		<style  type="text/css">
+			body {background-color: #000000; font-family: Tahoma,Arial;}
 			.galerias {
 				position: absolute; /* posição absoluta ao elemento pai, neste caso o BODY */
 				/* Posiciona no meio, tanto em relação a esquerda como ao topo */
@@ -23,7 +19,7 @@
 				left: 10%;
 				top: 5%;
 				width: 80%; /* Largura da DIV */
-				height: 90%; /* Altura da DIV */
+				height: 85%; /* Altura da DIV */
 				max-height: 960px;
 				/* A margem a esquerda deve ser menos a metade da largura */
 				/* A margem ao topo deve ser menos a metade da altura */
@@ -37,76 +33,68 @@
 			.texto{
 				text-shadow: 2px 2px #000000;
 			}
-			#fechar { 
+			#fechar {
 				margin: 5px; font-size: 18px;
 				text-shadow: 2px 2px #000000;
-			
+
 			}
-			
+
 			.main{
 				max-width:95%;
 				max-height:95%;
-			
-			
-			}
-	</style>
 
-	  <script type="text/javascript">
-	  
-		function fechar(id) {
-			document.getElementById(id).style.display = 'none';
-			document.getElementById("sidebar").style.display = 'block';
-		}
-		
-		function abrir(id){
-			document.getElementById(id).style.display = 'block';
-			document.getElementById("sidebar").style.display = 'none';
-		}
-		
-		
-		
-	 </script>
-	 <script>
-		$(document).ready(function() {
-			fechar('galeriacasamento');	
-		});
-	 </script>
+
+			}
+	    </style>
+
+		<script type="text/javascript">
+			function fechar(id) {
+				document.getElementById(id).style.display = 'none';
+				document.getElementById("sidebar").style.display = 'block';
+			}
+			function abrir(id){
+				document.getElementById(id).style.display = 'block';
+				document.getElementById("sidebar").style.display = 'none';
+			}
+		</script>
+
+	 	<script>
+			$(document).ready(function() {
+				fechar('galeriacasamento');
+			});
+	 	</script>
 
 	</head>
+
 	<body>
 		<section id = "galerias">
-		
+
 			<div id="galeriacasamento" class = "galerias" style="display:none"> <!--para suavizar a troca de fotos-->
 				<script type="text/javascript">
-				
-				var arrayDados1 = new Array();
-				arrayDados1[0] = "images/casamento/2.jpg";
-				arrayDados1[1] = "images/casamento/3.jpg";
-				arrayDados1[2] = "images/casamento/4.jpg";
-				arrayDados1[3] = "images/casamento/5.jpg";
-				arrayDados1[4] = "images/casamento/6.jpg";
-				arrayDados1[5] = "images/casamento/7.jpg";
-				arrayDados1[6] = "images/casamento/8.jpg";
-				arrayDados1[7] = "images/casamento/9.jpg";
-				arrayDados1[8] = "images/casamento/10.jpg";
-				
+					var arrayDados1 = new Array();
+					arrayDados1[0] = "images/casamento/2.jpg";
+					arrayDados1[1] = "images/casamento/3.jpg";
+					arrayDados1[2] = "images/casamento/4.jpg";
+					arrayDados1[3] = "images/casamento/5.jpg";
+					arrayDados1[4] = "images/casamento/6.jpg";
+					arrayDados1[5] = "images/casamento/7.jpg";
+					arrayDados1[6] = "images/casamento/8.jpg";
+					arrayDados1[7] = "images/casamento/9.jpg";
+					arrayDados1[8] = "images/casamento/10.jpg";
 
-				var id1 = 0;
+					var id1 = 0;
 
-				function proxima1(){					
-					id1 += 1;
-					if(id1 > 9) id1 = 0;
-					$('#img1').fadeIn();
-					$('#img1').attr('src', arrayDados1[id1]);
-					
-				}
-				function anterior1(){
-					id1 -= 1;
-					if(id1 < 0) id1 = 5;
-					$('#img1').attr('src', arrayDados1[id1]);
-
-
-				}
+					function proxima1(){
+						id1 += 1;
+						if(id1 > 9) id1 = 0;
+						$('#img1').fadeIn();
+						$('#img1').attr('src', arrayDados1[id1]);
+					}
+					function anterior1(){
+						id1 -= 1;
+						if(id1 < 0) id1 = 5;
+						$('#img1').attr('src', arrayDados1[id1]);
+					}
 				</script>
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriacasamento');">FECHAR</a></div>
@@ -114,63 +102,57 @@
 				<div id="anterior" align=center><a class = "texto" href="javascript:anterior1();">Anterior </a>|<a class = "texto" href="javascript:proxima1();"> Próxima</a></div>
 
 			</div>
-			
+
 			<div id="galeriawedding" class = "galerias" style="display:none"> <!-- para suavizar a troca de fotos-->
 				<script type="text/javascript">
-				
-				var arrayDados2 = new Array();
-				arrayDados2[0] = "images/wedding/1.jpg";
-				arrayDados2[1] = "images/wedding/2.jpg";
-				arrayDados2[2] = "images/wedding/3.jpg";
-				arrayDados2[3] = "images/wedding/4.jpg";
-				arrayDados2[4] = "images/wedding/5.jpg";
-				arrayDados2[5] = "images/wedding/6.jpg";
-				arrayDados2[6] = "images/wedding/7.jpg";
-				arrayDados2[7] = "images/wedding/8.jpg";
-				arrayDados2[8] = "images/wedding/9.jpg";
-				arrayDados2[9] = "images/wedding/10.jpg";
-				arrayDados2[10] = "images/wedding/11.jpg";
-				arrayDados2[11] = "images/wedding/12.jpg";
-				arrayDados2[12] = "images/wedding/13.jpg";
-				arrayDados2[13] = "images/wedding/14.jpg";
-				arrayDados2[14] = "images/wedding/15.jpg";
-				arrayDados2[15] = "images/wedding/16.jpg";
-				arrayDados2[16] = "images/wedding/17.jpg";
-				arrayDados2[17] = "images/wedding/18.jpg";
-				arrayDados2[18] = "images/wedding/19.jpg";
-				arrayDados2[19] = "images/wedding/20.jpg";
-				arrayDados2[20] = "images/wedding/21.jpg";
-				arrayDados2[21] = "images/wedding/22.jpg";
-				arrayDados2[22] = "images/wedding/23.jpg";
-				arrayDados2[23] = "images/wedding/24.jpg";
-				arrayDados2[24] = "images/wedding/25.jpg";
-				arrayDados2[25] = "images/wedding/26.jpg";
-				arrayDados2[26] = "images/wedding/27.jpg";
-				arrayDados2[27] = "images/wedding/28.jpg";
-				arrayDados2[28] = "images/wedding/29.jpg";
-				arrayDados2[29] = "images/wedding/30.jpg";
-				arrayDados2[30] = "images/wedding/31.jpg";
-				arrayDados2[31] = "images/wedding/32.jpg";
-				
-				
+					var arrayDados2 = new Array();
+					arrayDados2[0] = "images/wedding/1.jpg";
+					arrayDados2[1] = "images/wedding/2.jpg";
+					arrayDados2[2] = "images/wedding/3.jpg";
+					arrayDados2[3] = "images/wedding/4.jpg";
+					arrayDados2[4] = "images/wedding/5.jpg";
+					arrayDados2[5] = "images/wedding/6.jpg";
+					arrayDados2[6] = "images/wedding/7.jpg";
+					arrayDados2[7] = "images/wedding/8.jpg";
+					arrayDados2[8] = "images/wedding/9.jpg";
+					arrayDados2[9] = "images/wedding/10.jpg";
+					arrayDados2[10] = "images/wedding/11.jpg";
+					arrayDados2[11] = "images/wedding/12.jpg";
+					arrayDados2[12] = "images/wedding/13.jpg";
+					arrayDados2[13] = "images/wedding/14.jpg";
+					arrayDados2[14] = "images/wedding/15.jpg";
+					arrayDados2[15] = "images/wedding/16.jpg";
+					arrayDados2[16] = "images/wedding/17.jpg";
+					arrayDados2[17] = "images/wedding/18.jpg";
+					arrayDados2[18] = "images/wedding/19.jpg";
+					arrayDados2[19] = "images/wedding/20.jpg";
+					arrayDados2[20] = "images/wedding/21.jpg";
+					arrayDados2[21] = "images/wedding/22.jpg";
+					arrayDados2[22] = "images/wedding/23.jpg";
+					arrayDados2[23] = "images/wedding/24.jpg";
+					arrayDados2[24] = "images/wedding/25.jpg";
+					arrayDados2[25] = "images/wedding/26.jpg";
+					arrayDados2[26] = "images/wedding/27.jpg";
+					arrayDados2[27] = "images/wedding/28.jpg";
+					arrayDados2[28] = "images/wedding/29.jpg";
+					arrayDados2[29] = "images/wedding/30.jpg";
+					arrayDados2[30] = "images/wedding/31.jpg";
+					arrayDados2[31] = "images/wedding/32.jpg";
 
-				var id = 0;
+					var id = 0;
 
-				function proxima(){				
-					id += 1;
-					if(id > 31) id = 0;
-					$('#img2').fadeIn();
-					$('#img2').attr('src', arrayDados2[id]);
-					
-				}
-				function anterior(){
-					$('#img2').fadeIn();
-					id -= 1;
-					if(id < 0) id = 5;
-					$('#img2').attr('src', arrayDados2[id]);
-
-
-				}
+					function proxima(){
+						id += 1;
+						if(id > 31) id = 0;
+						$('#img2').fadeIn();
+						$('#img2').attr('src', arrayDados2[id]);
+					}
+					function anterior(){
+						$('#img2').fadeIn();
+						id -= 1;
+						if(id < 0) id = 5;
+						$('#img2').attr('src', arrayDados2[id]);
+					}
 				</script>
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriawedding');">FECHAR</a></div>
@@ -178,9 +160,7 @@
 				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
 
 			</div>
-			
-			
-			
+
 		</section>
 
 		<!-- Sidebar -->
@@ -190,13 +170,12 @@
 						<ul>
 							<li><a href="#intro">Bem-vindo</a></li>
 							<li><a href="#one">Portfolio</a></li>
-							<!--li><a href="#two">What we do</a></li-->
+							<li><a href="#two">Sobre nós</a></li>
 							<li><a href="#three">Contato</a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
-
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -204,10 +183,9 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-
-							<ul class="actions" align = "center">
+							<!--ul class="actions" align = "center">
 								<li ><a href="#one"  class="button scrolly">Conheça</a></li>
-							</ul>
+							</ul-->
 						</div>
 
 					</section>
@@ -216,6 +194,7 @@
 				<!-- PORTFÓLIO -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
+							<!--h2>Portfolio</h2-->
 							<a href="#" class="image"><img src="images/capa-casamento.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
@@ -292,9 +271,9 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
+							<h2>Sobre nós</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.MEU PAU</p>
+							<!--div class="features">
 								<section>
 									<span class="icon major fa-code"></span>
 									<h3>Lorem ipsum amet</h3>
@@ -329,7 +308,7 @@
 							<ul class="actions">
 								<li><a href="#" class="button">Learn more</a></li>
 							</ul>
-						</div>
+						</div-->
 					</section >
 
                     <!-- Three -->
