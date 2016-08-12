@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		
+	
 
 		<style  type="text/css">
 			body {background-color: #000000; font-family: Tahoma,Arial;}
@@ -42,6 +44,13 @@
 				max-width:80%;
 				max-height:80%;
 			}
+			
+			
+			.element {
+				width = 100%;
+				height = 50px;
+			  }
+			
 	    </style>
 
 		<script type="text/javascript">
@@ -63,8 +72,12 @@
 	</head>
 
 	<body>
+	
+			
 
 		<section id = "galerias">
+		
+		
 
 			<div id="galeriacasamento" class = "galerias" style="display:none"> <!--para suavizar a troca de fotos-->
 				<script type="text/javascript">
@@ -78,24 +91,58 @@
 					arrayDados1[6] = "images/casamento/8.jpg";
 					arrayDados1[7] = "images/casamento/9.jpg";
 					arrayDados1[8] = "images/casamento/10.jpg";
+					arrayDados1[9] = "images/casamento/11.jpg";
+					arrayDados1[10] = "images/casamento/12.jpg";
+					arrayDados1[11] = "images/casamento/13.jpg";
+					arrayDados1[12] = "images/casamento/14.jpg";
+					arrayDados1[13] = "images/casamento/15.jpg";
+					arrayDados1[14] = "images/casamento/16.jpg";
+					arrayDados1[15] = "images/casamento/17.jpg";
+					arrayDados1[16] = "images/casamento/18.jpg";
+					arrayDados1[17] = "images/casamento/19.jpg";
+					arrayDados1[18] = "images/casamento/20.jpg";
+					arrayDados1[19] = "images/casamento/21.jpg";
+					arrayDados1[20] = "images/casamento/22.jpg";
+					arrayDados1[21] = "images/casamento/23.jpg";
+					arrayDados1[22] = "images/casamento/24.jpg";
+					arrayDados1[23] = "images/casamento/25.jpg";
+					arrayDados1[24] = "images/casamento/26.jpg";
+					arrayDados1[25] = "images/casamento/27.jpg";
+					arrayDados1[26] = "images/casamento/28.jpg";
+					arrayDados1[27] = "images/casamento/29.jpg";
+					arrayDados1[28] = "images/casamento/30.jpg";
+					arrayDados1[29] = "images/casamento/31.jpg";
+					arrayDados1[30] = "images/casamento/32.jpg";
+					arrayDados1[31] = "images/casamento/33.jpg";
+					arrayDados1[32] = "images/casamento/34.jpg";
+					arrayDados1[33] = "images/casamento/35.jpg";
+					arrayDados1[34] = "images/casamento/36.jpg";
+					arrayDados1[35] = "images/casamento/37.jpg";
+					arrayDados1[36] = "images/casamento/38.jpg";
+					arrayDados1[37] = "images/casamento/39.jpg";
+					arrayDados1[38] = "images/casamento/40.jpg";
+					arrayDados1[39] = "images/casamento/41.jpg";
+					arrayDados1[40] = "images/casamento/42.jpg";
+					arrayDados1[41] = "images/casamento/43.jpg";
+					
 
-					var id1 = 0;
+					var id1 = 1;
 
 					function proxima1(){
 						id1 += 1;
-						if(id1 > 9) id1 = 0;
+						if(id1 > 41) id1 = 0;
 						$('#img1').fadeIn();
 						$('#img1').attr('src', arrayDados1[id1]);
 					}
 					function anterior1(){
 						id1 -= 1;
-						if(id1 < 0) id1 = 5;
+						if(id1 < 0) id1 = 41;
 						$('#img1').attr('src', arrayDados1[id1]);
 					}
 				</script>
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriacasamento');">FECHAR</a></div>
-				<img id = "img1" class = "main" src="images/casamento/1.jpg">
+				<img id = "img1" class = "main" src="images/casamento/2.jpg">
 				<div id="anterior" align=center><a class = "texto" href="javascript:anterior1();">Anterior </a>|<a class = "texto" href="javascript:proxima1();"> Próxima</a></div>
 
 			</div>
@@ -135,25 +182,38 @@
 					arrayDados2[29] = "images/wedding/30.jpg";
 					arrayDados2[30] = "images/wedding/31.jpg";
 					arrayDados2[31] = "images/wedding/32.jpg";
+					arrayDados2[32] = "images/wedding/33.jpg";
+					arrayDados2[33] = "images/wedding/34.jpg";
+					arrayDados2[34] = "images/wedding/35.jpg";
+					arrayDados2[35] = "images/wedding/36.jpg";
+					arrayDados2[36] = "images/wedding/37.jpg";
+					arrayDados2[37] = "images/wedding/38.jpg";
+					arrayDados2[38] = "images/wedding/39.jpg";
+					arrayDados2[39] = "images/wedding/40.jpg";
+					arrayDados2[40] = "images/wedding/41.jpg";
+					arrayDados2[41] = "images/wedding/42.jpg";
+					arrayDados2[42] = "images/wedding/43.jpg";
+					arrayDados2[43] = "images/wedding/44.jpg";
+					arrayDados2[44] = "images/wedding/45.jpg";
 
 					var id = 0;
-					function proxima(){
+					function proxima2(){
 						id += 1;
-						if(id > 31) id = 0;
+						if(id > 44) id = 0;
 						$('#img2').fadeIn();
 						$('#img2').attr('src', arrayDados2[id]);
 					}
-					function anterior(){
+					function anterior2(){
 						$('#img2').fadeIn();
 						id -= 1;
-						if(id < 0) id = 5;
+						if(id < 0) id = 44;
 						$('#img2').attr('src', arrayDados2[id]);
 					}
 				</script>
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriawedding');">FECHAR</a></div>
 				<img id = "img2" class = "main" src="images/wedding/1.jpg">
-				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior2();">Anterior </a>|<a class = "texto" href="javascript:proxima2();"> Próxima</a></div>
 
 			</div>
 
@@ -181,12 +241,12 @@
 					arrayDados3[18] = "images/diagramado/19.jpg";
 
 					var id = 0;
-					function proxima(){
+					function proxima3(){
 						id = (id + 1) % 19;
 						$('#img3').fadeIn();
 						$('#img3').attr('src', arrayDados3[id]);
 					}
-					function anterior(){
+					function anterior3(){
 						$('#img3').fadeIn();
 						id -= 1;
 						if (id < 0) id = 18;
@@ -196,45 +256,54 @@
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriadiagramado');">FECHAR</a></div>
 				<img id = "img3" class = "main" src="images/diagramado/01.jpg">
-				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior3();">Anterior </a>|<a class = "texto" href="javascript:proxima3();"> Próxima</a></div>
 			</div>
 
 			<div id="galeria15anos" class="galerias" style="display:none">
 				<script type="text/javascript">
 					var arrayDados4 = new Array();
-					arrayDados4[0] = "images/15anos/01.jpg";
-					arrayDados4[1] = "images/15anos/02.jpg";
-					arrayDados4[2] = "images/15anos/03.jpg";
-					arrayDados4[3] = "images/15anos/04.jpg";
-					arrayDados4[4] = "images/15anos/05.jpg";
-					arrayDados4[5] = "images/15anos/06.jpg";
-					arrayDados4[6] = "images/15anos/07.jpg";
-					arrayDados4[7] = "images/15anos/08.jpg";
-					arrayDados4[8] = "images/15anos/09.jpg";
+					arrayDados4[0] = "images/15anos/1.jpg";
+					arrayDados4[1] = "images/15anos/2.jpg";
+					arrayDados4[2] = "images/15anos/3.jpg";
+					arrayDados4[3] = "images/15anos/4.jpg";
+					arrayDados4[4] = "images/15anos/5.jpg";
+					arrayDados4[5] = "images/15anos/6.jpg";
+					arrayDados4[6] = "images/15anos/7.jpg";
+					arrayDados4[7] = "images/15anos/8.jpg";
+					arrayDados4[8] = "images/15anos/9.jpg";
 					arrayDados4[9] = "images/15anos/10.jpg";
 					arrayDados4[10] = "images/15anos/11.jpg";
 					arrayDados4[11] = "images/15anos/12.jpg";
 					arrayDados4[12] = "images/15anos/13.jpg";
 					arrayDados4[13] = "images/15anos/14.jpg";
 					arrayDados4[14] = "images/15anos/15.jpg";
+					arrayDados4[15] = "images/15anos/16.jpg";
+					arrayDados4[16] = "images/15anos/17.jpg";
+					arrayDados4[17] = "images/15anos/18.jpg";
+					arrayDados4[18] = "images/15anos/19.jpg";
+					arrayDados4[19] = "images/15anos/20.jpg";
+					arrayDados4[20] = "images/15anos/21.jpg";
+					arrayDados4[21] = "images/15anos/22.jpg";
+					arrayDados4[22] = "images/15anos/23.jpg";
+					arrayDados4[23] = "images/15anos/24.jpg";
 
 					var id = 0;
-					function proxima(){
-						id = (id + 1) % 15;
+					function proxima4(){
+						id = (id + 1) % 23;
 						$('#img4').fadeIn();
 						$('#img4').attr('src', arrayDados4[id]);
 					}
-					function anterior(){
+					function anterior4(){
 						$('#img4').fadeIn();
 						id -= 1;
-						if (id < 0) id = 14;
+						if (id < 0) id = 23;
 						$('#img4').attr('src', arrayDados4[id]);
 					}
 				</script>
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeria15anos');">FECHAR</a></div>
-				<img id ="img4" class = "main" src="images/15anos/01.jpg">
-				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+				<img id ="img4" class = "main" src="images/15anos/0.jpg">
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior4();">Anterior </a>|<a class = "texto" href="javascript:proxima4();"> Próxima</a></div>
 			</div>
 
 			<div id="galeriainfantil" class="galerias" style="display:none">
@@ -269,12 +338,12 @@
 					arrayDados5[26] = "images/infantil/27.jpg";
 
 					var id = 0;
-					function proxima(){
+					function proxima5(){
 						id = (id + 1) % 27;
 						$('#img5').fadeIn();
 						$('#img5').attr('src', arrayDados5[id]);
 					}
-					function anterior(){
+					function anterior5(){
 						$('#img5').fadeIn();
 						id -= 1;
 						if (id < 0) id = 26;
@@ -284,7 +353,7 @@
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriainfantil');">FECHAR</a></div>
 				<img id ="img5" class = "main" src="images/infantil/01.jpg">
-				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior5();">Anterior </a>|<a class = "texto" href="javascript:proxima5();"> Próxima</a></div>
 			</div>
 
 			<div id="galeriagestantes" class="galerias" style="display:none">
@@ -322,12 +391,12 @@
 					arrayDados6[29] = "images/gestantes/30.jpg";
 
 					var id = 0;
-					function proxima(){
+					function proxima6(){
 						id = (id + 1) % 30;
 						$('#img6').fadeIn();
 						$('#img6').attr('src', arrayDados6[id]);
 					}
-					function anterior(){
+					function anterior6(){
 						$('#img6').fadeIn();
 						id -= 1;
 						if (id < 0) id = 29;
@@ -337,11 +406,12 @@
 
 				<div id="fechar" class = "fechar" align=right><a href="javascript:fechar('galeriagestantes');">FECHAR</a></div>
 				<img id ="img6" class = "main" src="images/gestantes/01.jpg">
-				<div id="anterior" align=center><a class = "texto" href="javascript:anterior();">Anterior </a>|<a class = "texto" href="javascript:proxima();"> Próxima</a></div>
+				<div id="anterior" align=center><a class = "texto" href="javascript:anterior6();">Anterior </a>|<a class = "texto" href="javascript:proxima6();"> Próxima</a></div>
 			</div>
 
 		</section>
 
+		
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
@@ -425,7 +495,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Casamentos</h2>
-									<p>Descrição</p>
+									<p>	"Traduzimos emoção em eternidade, fazendo com que cada lembrança seja única na vida do casal."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeriacasamento');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -437,7 +507,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Pre-Wedding / Trash the Drass</h2>
-									<p>Descrição</p>
+									<p>"Um momento único e descontraído, revertido em emoção através de um olhar, transformado em alegria e a todo momento desvendando sentimentos."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeriawedding');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -449,7 +519,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Álbuns Diagramados</h2>
-									<p>Descrição</p>
+									<p>"Reúna os melhores momentos do casal em um único lugar. Criatividade e expressão para todos os gostos."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeriadiagramado');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -461,7 +531,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>15 anos</h2>
-									<p>Descrição</p>
+									<p> "O dia mais esperado de uma menina, onde ela deixa a juventude para se tornar uma mulher. As fotografias guardam o momento para sempre."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeria15anos');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -473,7 +543,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Infantil</h2>
-									<p>Descrição</p>
+									<p>"Como é bom tê-los para sempre, crianças são os maiores presentes que ganhamos na vida. Guarde todas as recordações em belas fotografias."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeriainfantil');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -485,7 +555,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Gestantes</h2>
-									<p>Descrição</p>
+									<p>"O sentimento da mãe pelo filho é algo indecifrável, mesmo longe do seu olhar, é capaz de expressar a emoção em uma imagem."</p>
 									<ul class="actions">
 										<li ><a href="javascript:abrir('galeriagestantes');" class="button" >Ver álbum</a></li>
 									</ul>
@@ -561,7 +631,7 @@
     								<li>
     									<h3>Fone</h3>
     									<span><b>Fixo:</b> (16) 3702-3574 <br />
-											<b>Whatsapp:</b> (16) 99155-8315</span>
+											<b>Whatsapp:</b> (16) 9 9155-8315</span>
     								</li>
     								<li>
     									<h3>Social</h3>
@@ -578,6 +648,8 @@
     					</section >
 
     			</div>
+				
+			
 
 
 
@@ -586,8 +658,10 @@
 				<div class="inner">
 					<ul class="menu">
 						<li>&copy; Sérgio Fotografias, 2016. Totos os direitos reservados.</li>
+						
 					</ul>
 				</div>
+			
 			</footer>
 
 		<!-- Scripts -->
@@ -598,7 +672,15 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+		<div class = "outer">	
+		
+		</div>
 
 	</body>
-
+	<!-- SCM Music Player http://scmplayer.net -->
+<script type="text/javascript" src="http://scmplayer.net/script.js" 
+data-config="{'skin':'http://static.tumblr.com/d41lcii/ppymevuzw/simpleblue.css','volume':100,'autoplay':false,'shuffle':false,'repeat':1,'placement':'top','showplaylist':true,'playlist':[{'title':'.','url':'https://www.youtube.com/watch?v=VNyWpWxUnXM'}]}" ></script>
+<!-- SCM Music Player script end -->
+				
 </html>
+		
