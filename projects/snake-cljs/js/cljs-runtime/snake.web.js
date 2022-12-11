@@ -15,8 +15,8 @@ if((typeof snake !== 'undefined') && (typeof snake.web !== 'undefined') && (type
 snake.web.touch_state = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentVector.EMPTY);
 }
 snake.web.change_direction_on_keydown = (function snake$web$change_direction_on_keydown(event){
-var temp__5804__auto__ = (function (){var G__11345 = event.key;
-switch (G__11345) {
+var temp__5804__auto__ = (function (){var G__11541 = event.key;
+switch (G__11541) {
 case "ArrowLeft":
 return new cljs.core.Keyword(null,"left","left",-399115937);
 
@@ -40,8 +40,8 @@ return null;
 })();
 if(cljs.core.truth_(temp__5804__auto__)){
 var direction = temp__5804__auto__;
-return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,(function (p1__11344_SHARP_){
-return snake.game.change_direction(p1__11344_SHARP_,direction);
+return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,(function (p1__11540_SHARP_){
+return snake.game.change_direction(p1__11540_SHARP_,direction);
 }));
 } else {
 return null;
@@ -62,17 +62,17 @@ snake.web.handle_touch_move = (function snake$web$handle_touch_move(event){
 var temp__5804__auto__ = cljs.core.seq(cljs.core.deref(snake.web.touch_state));
 if(temp__5804__auto__){
 var state = temp__5804__auto__;
-var vec__11348 = state;
-var x_start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11348,(0),null);
-var y_start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11348,(1),null);
-var vec__11351 = snake.web.get_touch_pos(event);
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11351,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11351,(1),null);
+var vec__11543 = state;
+var x_start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11543,(0),null);
+var y_start = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11543,(1),null);
+var vec__11546 = snake.web.get_touch_pos(event);
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11546,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11546,(1),null);
 var x_diff = (x_start - x);
 var y_diff = (y_start - y);
 var direction = (((cljs.core.abs(x_diff) > cljs.core.abs(y_diff)))?(((x_diff > (0)))?new cljs.core.Keyword(null,"left","left",-399115937):new cljs.core.Keyword(null,"right","right",-452581833)):(((y_diff > (0)))?new cljs.core.Keyword(null,"up","up",-269712113):new cljs.core.Keyword(null,"down","down",1565245570)));
-cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,(function (p1__11347_SHARP_){
-return snake.game.change_direction(p1__11347_SHARP_,direction);
+cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,(function (p1__11542_SHARP_){
+return snake.game.change_direction(p1__11542_SHARP_,direction);
 }));
 
 return cljs.core.reset_BANG_(snake.web.touch_state,cljs.core.PersistentVector.EMPTY);
@@ -80,10 +80,10 @@ return cljs.core.reset_BANG_(snake.web.touch_state,cljs.core.PersistentVector.EM
 return null;
 }
 });
-snake.web.draw_block = (function snake$web$draw_block(p__11354,block_width,block_height){
-var vec__11355 = p__11354;
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11355,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11355,(1),null);
+snake.web.draw_block = (function snake$web$draw_block(p__11549,block_width,block_height){
+var vec__11550 = p__11549;
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11550,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11550,(1),null);
 return snake.web.canvas_ctx.fillRect((x * block_width),(y * block_height),block_width,block_height);
 });
 snake.web.get_scores_display_text = (function snake$web$get_scores_display_text(score,high_score){
@@ -97,13 +97,13 @@ return snake.web.canvas_ctx.fillRect((0),(0),snake.web.canvas.width,snake.web.ca
 snake.web.set_score = (function snake$web$set_score(score,high_score){
 return (snake.web.score_txt.innerHTML = snake.web.get_scores_display_text(score,high_score));
 });
-snake.web.draw_game_state = (function snake$web$draw_game_state(p__11358){
-var map__11359 = p__11358;
-var map__11359__$1 = cljs.core.__destructure_map(map__11359);
-var snake__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11359__$1,new cljs.core.Keyword(null,"snake","snake",-244377242));
-var food = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11359__$1,new cljs.core.Keyword(null,"food","food",1842183121));
-var score = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11359__$1,new cljs.core.Keyword(null,"score","score",-1963588780));
-var high_score = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11359__$1,new cljs.core.Keyword(null,"high-score","high-score",-1220549879));
+snake.web.draw_game_state = (function snake$web$draw_game_state(p__11553){
+var map__11554 = p__11553;
+var map__11554__$1 = cljs.core.__destructure_map(map__11554);
+var snake__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11554__$1,new cljs.core.Keyword(null,"snake","snake",-244377242));
+var food = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11554__$1,new cljs.core.Keyword(null,"food","food",1842183121));
+var score = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11554__$1,new cljs.core.Keyword(null,"score","score",-1963588780));
+var high_score = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11554__$1,new cljs.core.Keyword(null,"high-score","high-score",-1220549879));
 var block_width = cljs.core.quot(snake.web.canvas.width,snake.web.grid_size);
 var block_height = cljs.core.quot(snake.web.canvas.height,snake.web.grid_size);
 snake.web.clear_screen();
@@ -114,53 +114,53 @@ snake.web.draw_block(food,block_width,block_height);
 
 (snake.web.canvas_ctx.fillStyle = "rgb(0,0,0)");
 
-var seq__11360_11365 = cljs.core.seq(snake__$1);
-var chunk__11361_11366 = null;
-var count__11362_11367 = (0);
-var i__11363_11368 = (0);
+var seq__11555_11562 = cljs.core.seq(snake__$1);
+var chunk__11556_11563 = null;
+var count__11557_11564 = (0);
+var i__11558_11565 = (0);
 while(true){
-if((i__11363_11368 < count__11362_11367)){
-var part_11369 = chunk__11361_11366.cljs$core$IIndexed$_nth$arity$2(null,i__11363_11368);
-snake.web.draw_block(part_11369,block_width,block_height);
+if((i__11558_11565 < count__11557_11564)){
+var part_11566 = chunk__11556_11563.cljs$core$IIndexed$_nth$arity$2(null,i__11558_11565);
+snake.web.draw_block(part_11566,block_width,block_height);
 
 
-var G__11370 = seq__11360_11365;
-var G__11371 = chunk__11361_11366;
-var G__11372 = count__11362_11367;
-var G__11373 = (i__11363_11368 + (1));
-seq__11360_11365 = G__11370;
-chunk__11361_11366 = G__11371;
-count__11362_11367 = G__11372;
-i__11363_11368 = G__11373;
+var G__11567 = seq__11555_11562;
+var G__11568 = chunk__11556_11563;
+var G__11569 = count__11557_11564;
+var G__11570 = (i__11558_11565 + (1));
+seq__11555_11562 = G__11567;
+chunk__11556_11563 = G__11568;
+count__11557_11564 = G__11569;
+i__11558_11565 = G__11570;
 continue;
 } else {
-var temp__5804__auto___11374 = cljs.core.seq(seq__11360_11365);
-if(temp__5804__auto___11374){
-var seq__11360_11375__$1 = temp__5804__auto___11374;
-if(cljs.core.chunked_seq_QMARK_(seq__11360_11375__$1)){
-var c__5568__auto___11376 = cljs.core.chunk_first(seq__11360_11375__$1);
-var G__11377 = cljs.core.chunk_rest(seq__11360_11375__$1);
-var G__11378 = c__5568__auto___11376;
-var G__11379 = cljs.core.count(c__5568__auto___11376);
-var G__11380 = (0);
-seq__11360_11365 = G__11377;
-chunk__11361_11366 = G__11378;
-count__11362_11367 = G__11379;
-i__11363_11368 = G__11380;
+var temp__5804__auto___11571 = cljs.core.seq(seq__11555_11562);
+if(temp__5804__auto___11571){
+var seq__11555_11572__$1 = temp__5804__auto___11571;
+if(cljs.core.chunked_seq_QMARK_(seq__11555_11572__$1)){
+var c__5568__auto___11573 = cljs.core.chunk_first(seq__11555_11572__$1);
+var G__11574 = cljs.core.chunk_rest(seq__11555_11572__$1);
+var G__11575 = c__5568__auto___11573;
+var G__11576 = cljs.core.count(c__5568__auto___11573);
+var G__11577 = (0);
+seq__11555_11562 = G__11574;
+chunk__11556_11563 = G__11575;
+count__11557_11564 = G__11576;
+i__11558_11565 = G__11577;
 continue;
 } else {
-var part_11381 = cljs.core.first(seq__11360_11375__$1);
-snake.web.draw_block(part_11381,block_width,block_height);
+var part_11578 = cljs.core.first(seq__11555_11572__$1);
+snake.web.draw_block(part_11578,block_width,block_height);
 
 
-var G__11382 = cljs.core.next(seq__11360_11375__$1);
-var G__11383 = null;
-var G__11384 = (0);
-var G__11385 = (0);
-seq__11360_11365 = G__11382;
-chunk__11361_11366 = G__11383;
-count__11362_11367 = G__11384;
-i__11363_11368 = G__11385;
+var G__11579 = cljs.core.next(seq__11555_11572__$1);
+var G__11580 = null;
+var G__11581 = (0);
+var G__11582 = (0);
+seq__11555_11562 = G__11579;
+chunk__11556_11563 = G__11580;
+count__11557_11564 = G__11581;
+i__11558_11565 = G__11582;
 continue;
 }
 } else {
@@ -171,10 +171,15 @@ break;
 
 return snake.web.set_score(score,high_score);
 });
-snake.web.game_over = (function snake$web$game_over(){
+snake.web.game_over = (function snake$web$game_over(p__11559){
+var map__11560 = p__11559;
+var map__11560__$1 = cljs.core.__destructure_map(map__11560);
+var high_score = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__11560__$1,new cljs.core.Keyword(null,"high-score","high-score",-1220549879));
 (snake.web.game_over_text.hidden = false);
 
-return (snake.web.start_button.disabled = false);
+(snake.web.start_button.disabled = false);
+
+return localStorage.setItem("high-score",high_score);
 });
 snake.web.game_loop = (function snake$web$game_loop(){
 var state = cljs.core.deref(snake.web.game_state);
@@ -185,12 +190,20 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,snake.ga
 
 return setTimeout(snake.web.game_loop,snake.web.game_clock);
 } else {
-return snake.web.game_over();
+return snake.web.game_over(state);
 
 }
 });
+snake.web.get_current_high_score = (function snake$web$get_current_high_score(){
+var or__5045__auto__ = localStorage.getItem("high-score");
+if(cljs.core.truth_(or__5045__auto__)){
+return or__5045__auto__;
+} else {
+return (0);
+}
+});
 snake.web.start_game = (function snake$web$start_game(){
-var high_score = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.deref(snake.web.game_state),new cljs.core.Keyword(null,"high-score","high-score",-1220549879),(0));
+var high_score = snake.web.get_current_high_score();
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(snake.web.game_state,(function (){
 return snake.game.get_initial_state(snake.web.grid_size,high_score);
 }));
@@ -204,7 +217,7 @@ return snake.web.game_loop();
 snake.web.init_game_screen = (function snake$web$init_game_screen(){
 snake.web.clear_screen();
 
-snake.web.set_score((0),(0));
+snake.web.set_score((0),snake.web.get_current_high_score());
 
 document.addEventListener("keydown",snake.web.change_direction_on_keydown);
 
