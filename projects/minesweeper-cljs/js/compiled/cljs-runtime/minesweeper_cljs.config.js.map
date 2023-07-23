@@ -1,1 +1,0 @@
-{"version":3,"sources":["minesweeper_cljs/config.cljs"],"mappings":";AAEA,AAAKA,uCACMC","names":["minesweeper-cljs.config/debug?","js/goog.DEBUG"],"sourcesContent":["(ns minesweeper-cljs.config)\n\n(def debug?\n  ^boolean goog.DEBUG)\n"]}

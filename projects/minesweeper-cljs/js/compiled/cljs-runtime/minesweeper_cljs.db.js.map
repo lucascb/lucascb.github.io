@@ -1,1 +1,0 @@
-{"version":3,"sources":["minesweeper_cljs/db.cljs"],"mappings":";AAGA,iCAAA,2CAAA,5EAAKA,4IACU,wCAAA,IAAA,5CAACC","names":["minesweeper-cljs.db/default-db","minesweeper-cljs.game/get-initial-state"],"sourcesContent":["(ns minesweeper-cljs.db\n  (:require [minesweeper-cljs.game :as game]))\n\n(def default-db\n  {:game-state (game/get-initial-state 9 9)})\n"]}
